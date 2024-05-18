@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator using js</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="calculator">
+            <form action="">
+                <div class="display">
+                    <input type="text" name="display">      <!-- display the result -->
+                </div>
+
+                <div>
+                    <input type="button" value="sin" onclick="display.value +='sin(' " class="operator">
+                    <input type="button" value="cos" onclick="display.value +='cos(' " class="operator">
+                    <input type="button" value="tan" onclick="display.value +='tan(' " class="operator">
+                    <!-- <input type="button" value="tan" onclick="display.value +='tan(' " class="operator"> -->
+
+                    <input type="button" value="%" onclick="display.value +='%' " class="operator">
+                    
+                </div>
+
+                <div>
+                    <input type="button" value="(" onclick="display.value +='(' " class="operator">
+                    <input type="button" value=")" onclick="display.value +=')' " class="operator">
+                    <input type="button" value="x^2" onclick="display.value +='^2' " class="operator">
+                    <input type="button" value="x^y" onclick="display.value +='^' " class="operator">
+                </div>x
+                
+
+                <div>
+                    <input type="button" value="/"  onclick="display.value +='/' " class="operator">
+                    <input type="button" value="*"  onclick="display.value +='*' " class="operator">
+                    <input type="button" value="+"  onclick="display.value +='+' " class="operator">
+                    <input type="button" value="_"  onclick="display.value +='-' " class="operator">
+                </div>
+
+
+                <div>
+                    <input type="button" value="7" onclick="display.value +='7' ">
+                    <input type="button" value="8" onclick="display.value +='8' ">
+                    <input type="button" value="9" onclick="display.value +='9' ">
+                    <input type="button" value="AC" onclick="display.value ='' " class="operator">
+
+                </div>
+
+                <div>
+                    <input type="button" value="4" onclick="display.value +='4' ">
+                    <input type="button" value="5" onclick="display.value +='5' ">
+                    <input type="button" value="6" onclick="display.value +='6' ">
+                    <input type="button" value="DE" onclick="display.value = display.value.toString().slice(0,-1) " class="operator">
+
+                </div>
+
+                <div>
+                    <input type="button" value="1" onclick="display.value +='1' ">
+                    <input type="button" value="2" onclick="display.value +='2' ">
+                    <input type="button" value="3" onclick="display.value +='3' ">
+                    <input type="button" value="." onclick="display.value +='.' " class="operator">
+
+                </div>
+
+                <div>
+                    <input type="button" value="00" onclick="display.value +='00' ">
+                    <input type="button" value="0" onclick="display.value +='0' ">
+                    <!-- <input type="button" value="=" class="equal operator"  onclick="display.value =eval(display.value) " class="operator"> -->
+                    <!-- <input type="button" value="=" class="equal " onclick="display.value=eval(display.value)">  -->
+                    <input type="button" value="=" class="equal " onclick="cal(display.value)"> 
+
+                </div>
+            </form>
+        </div>
+    </div>
+    <script>
+        
+
+
+function extractDegreeAndFunction(expression) {
+    // Regular expression to match a number inside parentheses and the trigonometric function
+    var regex = /([a-z]+)?\((\d+)\)|(\d+)\^(\d+)/;
+
+    // Executing the regular expression on the input string
+    var match = regex.exec(expression);
+    console.log(match);
+    // If there's a match
+    if (match) {
+        // Check if it's a trigonometric function or a power expression
+        if (match[1]) {
+            var func = match[1].toLowerCase(); // Extracting the function and converting to lowercase
+            var degree = parseInt(match[2]); // Extracting the degree value
+        } else {
+            var degree = parseInt(match[3]); // Extracting the base value
+            var exponent = parseInt(match[4]); // Extracting the exponent value
+        }
+        
+
+        // Determining the function code if it's a trigonometric function
+        if (func) {
+            var funcCode;
+            switch(func) {
+                case "sin":
+                    funcCode = 1;
+                    break;
+                case "cos":
+                    funcCode = 2;
+                    break;
+                case "tan":
+                    funcCode = 3;
+                    break;
+                default:
+                    funcCode = 0; // Default to 0 if none of these functions are found
+            }
+            return [funcCode, degree];
+        } else { // Return the base and exponent if it's a power expression
+            return [4, Math.pow(degree, exponent)];
+        }
+    }
+    
+    // Return null if no match is found
+    return [0, 0];
+}
+
+function cal(str){
+    var display = document.getElementsByName('display')[0];
+    let result;
+    if (str.includes('%')) {
+        // Split the string into operands
+        var operands = str.split('%');
+        
+        // Perform modulo operation
+        result = parseInt(operands[0]) % parseInt(operands[1]);
+    }else{
+
+    const [funcCode, degree] = extractDegreeAndFunction(str);  //array destructuring
+
+    if(funcCode === 0){ // for non-trigonometric strings and power expressions
+        result = eval(str);
+    } else{
+        var radians = degree * (Math.PI / 180);
+
+        if(funcCode === 1){
+            result = Math.sin(radians);
+            result=parseFloat(result.toFixed(2));
+        }
+        else if(funcCode === 2){
+            result = Math.cos(radians);
+            result=parseFloat(result.toFixed(2));
+        }
+        else if(funcCode === 3){
+            result = Math.tan(radians);
+            if(result==16331239353195370){
+            result="Undefined";
+            }
+            else{
+            result=parseFloat(result.toFixed(2));
+            }
+        }
+        else{
+            result=degree;
+        }
+    }
+}
+    // result=parseFloat(result.toFixed(10));
+    display.value = result;
+
+}
+    </script>
+
+</body>
+</html>
+
+
+
+<!-- a=6
+console.log(a)
+var a -->

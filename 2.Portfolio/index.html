@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Ankan Roy</title>
+    <link rel="stylesheet" href="style.css">  <!-- css file -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+<!-- --------------------------------------navbar------------------------------ part -->
+    <div id="header">
+        <div class="container">
+            <nav>
+                <!-- <img src="images/logo.png" class="logo">      image of kevin. -->
+                <div class="logo">
+                    <h1>
+                        <span >@</span>nkan.
+                   </h1>
+                </div>
+                <ul id="sidemenu">   <!-- menu list-->
+                    <li> <a href="#header">Home</a></li>
+                    <li> <a href="#about">About</a></li>
+                    <li> <a href="#services">services</a></li>
+                    <li> <a href="#portfolio">Portfolio</a></li>
+                    <li> <a href="#contact">contact</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>    <!-- cross bar for small device -->
+                </ul>
+               <i class="fa-solid fa-bars" onclick="openmenu()"></i>   <!-- menu bar for small device -->
+            </nav>
+            <div class="hero_row">
+
+            <div class="header-text">
+                <p>Web developer</p>
+                <h1>Hi,I'm <span>Ankan</span>  <br> <span>Roy</span> </h1>
+            </div>
+            <div>
+                <img src="images/code.jpg" alt="">
+            </div>
+        </div>
+
+        </div>
+    </div>
+<!-- --------------------------------------navbar------------------------------ part -->
+
+
+
+
+
+
+
+<!-- ----------------------------------about------------------------------- -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">     <!-- contain photo -->
+                    <img src="images/Ankan.jpg" >
+                </div>
+                <div class="about-col-2">  <!-- contain text -->
+                    <h1 class="sub-title">About me</h1>
+                    <p> Seeking new opportunities and challenges to expand my wisdom. <br> Efficient leadership  and organizational skills. <br> Analytical and
+                        technical bent of mind. <br> Eager to contribute to all phases of the developmental cycle.</p>
+
+                    <div class="tab-titles">
+                        <!-- <p class="tab-links active-link " onclick="opentab('skills')">Skills</p> -->
+                        <p class="tab-links active-link" onclick="opentab('education')">Education</p>
+                        <p class="tab-links " onclick="opentab('experience')">Experience</p>
+                    </div>
+
+                    <!-- <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>UI?UX</span> <br> Design Web/App interfaces</li>
+                            <li><span>Web Development</span> <br> Design Web/App interfaces</li>
+                            <li><span>App Development</span> <br> Design Web/App interfaces </li>
+                        </ul>
+                    </div> -->
+                    <div class="tab-contents active-tab" id="education">
+                        <ul> 
+                            <li><span>2023-</span> <br> <b>Master of Computer Application</b>  <br>  Jadavpur University</li>
+                            <li><span> 2020-2023</span> <br>  Bachalor in Physics <br> Midnapore College(Autonomous)(Vidyasagar University) <br> <b style="color:#0189c3;">CGPA : 8.8(10)</b></li>
+                            <li><span>2020</span> <br> Higher Secondary Examination <br>  Jalchak Nateswari Netaji Vidyayatan <br> <b style="color:#0189c3;">92%</b></li>
+                            <li><span>2020</span> <br> Higher Secondary Examination <br>   Konarpur Sitalananda High School <br> <b style="color:#0189c3;">88%</b></li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents " id="experience">
+                        <ul>
+                            <li><span>02/2024 - 04/2024</span> <br>Completed internship in the domain of Web Development</li>
+                            <a href="https://drive.google.com/file/d/1KLfF92ORiPxM-NgzbP4TzyWLwq1xaAOy/view?usp=sharing " style="color:#0189c3;">view</a>
+                            <li><span>02/2024 - 04/2024</span> <br> Completed Industrial Training program in the domain of Web Development</li>
+                            <a href="https://drive.google.com/file/d/1kXKM9T_WyUiOrpEynPpL3g73qSGk2zRD/view?usp=sharing " style="color:#0189c3;">view</a>
+                        </ul>
+                    </div>
+                    
+                </div>
+
+            </div>
+        </div>
+    </div>
+<!-- ----------------------------------about------------------------------- -->
+
+
+
+
+
+
+
+<!-- -----------------------------------------services------------------------------------ -->
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">What can I do</h1>
+            <div class="services-list">  <!--list of what i can do-->
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Frontend Development</h2>
+                    <p>Crafting captivating user interfaces with HTML, CSS, and JavaScript to bring digital experiences to life</p>
+                        <!-- <a href="#">Learn more</a> -->
+                </div>
+                <div>
+                    <i class="fa-solid fa-database"></i>
+                    <h2>Backend Development</h2>
+                    <p>Building robust backend systems with Node.js and Express.js, utilizing RESTful APIs, and MongoDB for efficient data management. </p>
+                        <!-- <a href="#">Learn more</a> -->
+                </div>
+                <!-- <div>
+                    <i class="fa-solid fa-crop-simple"></i>
+                    <h2>ui/ux design</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse dicta </p>
+                        <a href="#">Learn more</a>
+                </div> -->
+                
+            </div>
+        </div>
+    </div>
+<!-- -----------------------------------------services------------------------------------ -->
+
+
+
+
+
+
+<!-- ---------------------technical skill------------------- -->
+
+<div id="technical">
+    <div class="container">
+        <h1 class="tech-title">Technical Skill</h1>
+        <div class="tech-list">  <!--list of what i can do-->
+            <div>
+                <img src="images/html-5.png" alt="">
+                <!-- <i class="fa-solid fa-code"></i> -->
+                <!-- <h2>Frontend Development</h2> -->
+                <!-- <p>html</p> -->
+                <!-- <a href="#">Learn more</a> -->
+            </div>
+            <div>
+                <img src="images/css.png" alt="">
+            </div>
+            <div>
+                <img src="images/js.png" alt="">
+            </div>
+            <div>
+                <img src="images/nodejs.png" alt="">
+            </div>
+            <div>
+                <img src="images/express-js.png" alt="">
+            </div>
+            <div>
+                <img src="images/mongoDB.webp" alt="">
+            </div>
+            <div>
+                <img src="images/social.png" alt="">
+                <p>Git</p>
+            </div>
+        <div>
+            <img src="images/c-.png" alt="">
+        </div>
+        <div>
+            <img src="images/java.png" alt="">
+        </div>
+
+            
+        </div>
+    </div>
+</div>
+
+<!-- ---------------------technical skill------------------- -->
+
+
+
+
+<!-- ---------------------------------portfolio------------------------- -->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="images/cal2.jpg" alt="">
+                    <div class="layer">
+                        <h3>Scientific Calculator</h3>
+                        <p>I've engineered a sophisticated scientific calculator, using HTML, CSS, and JavaScript. Seamlessly functional and visually striking.</p>
+                        <!-- <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a> -->
+                        <div>
+                            <a href="https://ankan-calculator.netlify.app/"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                            <!-- <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a> -->
+                        </div>
+
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/cur2.jpg" alt="">
+                    <div class="layer">
+                        <h3>Currency Converter</h3>
+                        <p>Designed an intuitive currency converter with HTML, CSS, and JavaScript, empowered by APIs to support all major currencies. Seamlessly switch between currencies for hassle-free transactions.</p>
+                        <!-- <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a> -->
+                        <div>
+                            <a href="https://currency-converter-ankan.netlify.app/"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                            <!-- <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/form.png" alt="">
+                    <div class="layer">
+                        <h3>From Validation System</h3>
+                        <p>Employing HTML, CSS, and JavaScript, I've devised an efficient form validation system. Seamlessly integrating front-end validation, it ensures data integrity and enhances user experience</p>
+                        <!-- <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a> -->
+                        <div>
+                            <a href="https://from-validation-system.netlify.app/"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                            <!-- <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a> -->
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="work">
+                    <img src="images/work-3.png" alt="">
+                    <div class="layer">
+                        <h3>Online shoping app</h3>
+                        <p>the app fewew ewf f ewfewfer erf eff connect you</p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div> -->
+            </div>
+            <a href="" class="btn"></a>
+        </div>
+    </div>
+<!-- ---------------------------------portfolio------------------------- -->
+
+
+
+
+
+
+
+<!-- ---------------------------------------contact------------------------------ -->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">   <!-- store from contact me to above part of download cv-->
+                <h1 class="sub-title">Contact me </h1>
+                <!-- <p ><i class="fa-solid fa-paper-plane"></i>ankanroy415@gmail.com</p>
+                <p><i class="fa-solid fa-square-phone"></i>8101721846</p> -->
+                <div class="social-icons">
+                    <!-- <a href=""><i class="fa-brands fa-facebook"></i></a> -->
+                    <!-- <a href=""><i class="fa-brands fa-square-instagram"></i></a> -->
+                    <a href="mailto:ankanroy415@gmail.com"><i class="fa-regular fa-envelope"></i>ankanroy415@gmail.com</a>
+                    <a href="tel:+918101721846"><i class="fa-solid fa-square-phone"></i> 8101721846</a>
+                    <a href="https://www.linkedin.com/in/ankan-roy-2a1792202/"><i class="fa-brands fa-linkedin"> </i> linkedin</a>
+                    <a href="https://github.com/AnkanRoy321"><i class="fa-brands fa-github"></i> Git-hub</a>
+                    <a href="https://leetcode.com/u/Ankan_Roy/"><i class="fa-solid fa-code"></i> leetcode</a>
+                </div>
+                <a href="https://drive.google.com/file/d/14OEknOSB3WoqjlvkvlCsU7_NE2Jd6dha/view?usp=sharing" download class="btn btn2">View Cv</a>
+                
+            </div>
+            <!-- <div class="query">
+                <p> send your query :</p>
+             </div> -->
+           <div class="contact-right">     <!-- generate the form -->
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="your name" required>
+                    <input type="text" name="Email" placeholder="your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Youe message"></textarea>
+                    <button type="submit" class="btn btn2">submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>copyright <i class="fa-regular fa-copyright"></i> Reserved , made with by <i class="fa-solid fa-heart"></i> Ankan</p>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<!-- -----------------------------------------java script-------------------------------------------- -->
+
+
+
+    <script >
+
+        // issue-1
+        var tablinks =document.getElementsByClassName("tab-links");
+        var tabcontents =document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname){
+
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab")
+            }
+
+            event.currentTarget.classList.add("active-link")
+
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+        // issue-1
+    </script>
+
+    <script >
+        // issue-2
+        var sidemenu = document.getElementById("sidemenu");  //sidemenu hold all menu list
+        function openmenu(){   //when click on sidemenu all menu list visible as width=200 so when right=0 it show all content with (+200+0)px width from right end
+            sidemenu.style.right="0";
+        }
+        function closemenu(){   //when click on sidemenu all menu list hide as width=200 so when right=-200px it hide all content with (+200px -200px) width 
+            sidemenu.style.right="-200px";
+        }
+        // issue-2
+    </script>
+
+<!-- ----------------------------------------------------------linking with google sheet-------------------------------------------------------------- -->
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxSJWWwDxCwCLLJeTL8jzHDt5DllYXH_VlHAnffR3bCy2wsYT4UeUEGM4cWSpI06-Uw/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById("msg");
+    
+        form.addEventListener('submit', e => {
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                msg.innerHTML = "Message sent Successfully"
+                setTimeout(function(){
+                    msg.innerHTML=""
+                },5000)
+                form.reset();
+            })
+            .catch(error => console.error('Error!', error.message))
+        })
+    </script>
+
+</body>
+</html>

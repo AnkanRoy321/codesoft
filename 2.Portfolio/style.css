@@ -1,0 +1,642 @@
+*{
+    margin:0;
+    padding: 0;
+    font-family: system-ui;
+    box-sizing: border-box;
+}
+/* scroll effect */
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background: #080808;  /* background color of page */
+    color: #fff;   /*color of the text written on the page*/
+}
+
+
+/*----------------------------------------------navbar------------------------------------*/
+
+#header{
+    width: 100%;
+    height: 90vh;
+    /* background-image: url(images/undraw_hacker_mind_6y85.png);     backgroub image for large device */
+    background-size: cover;
+    background-position: center;
+}
+
+.container{
+    padding: 10px 10%;   /* all content of navbar get space from left side and top*/
+}
+
+/* indise nav  --  kevin. and menu list present, */
+nav{
+    /* all contents place in the centre and all palce divide into same quantity */
+    display: flex;
+    align-items: center;  
+    justify-content:space-between ;
+    flex-wrap: wrap;   /*if content can not fit in same line then multiple line used*/
+}
+
+.sidemenu{
+    display: flex;
+    align-items: center;
+    
+    flex-wrap: nowrap;
+}
+
+/* style for kevin */
+.logo{
+    width: 140px;
+}
+
+/* all menu list items are place in same line(horozontally allin)*/
+nav ul li{
+    display: inline-block;
+    list-style: none;  
+    margin: 10px 20px;
+}
+
+/* style applied in each anchor tag i.e.home , about,service,portfolio,contact */
+nav ul li a{
+    color: #fff;            /* color of text is white */
+    text-decoration: none;    /*remove underline,which get each anchor tag by default */
+    font-size: 18px;
+    position: relative;
+}
+
+/* when ever you take cursor on the menu list i.e.home , about,service,portfolio,contacta red line grnerate */
+nav ul li a::after{
+    content: '';
+    width: 0;    /* by default no line show*/
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    transition: 0.5s;
+}  
+/* when you take cursor on that manu list it show the line */
+nav ul li a:hover::after{
+    width: 100%;
+}
+
+.logo {
+    /* margin-top: 40%; */
+    font-size: 0px;
+}
+/* style of Hi i'm ankan */
+.logo h1{
+    font-size: 40px;
+    margin-top: 20px;
+}
+.logo span{
+    color: #ff004f;
+}
+
+.header-text{
+    /* margin-top: 20%; */
+    font-size: 30px;
+}
+/* style of Hi i'm ankan */
+.header-text h1{
+    font-size: 60px;
+    /* margin-top: 20px; */
+}
+.header-text h1 span{
+    color: #ff004f;
+}
+
+
+
+
+
+.hero_row{
+    margin-top: 10rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.hero_row img{
+    width: 35rem;
+}
+
+/* ------------------------------------------------------about------------------------------------------------------------------------ */
+
+#about{
+    padding: 80px 0;
+    columns: #ababab;
+
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.about-col-1{
+    flex-basis: 35%;
+}
+/* style the image above about me text */
+.about-col-1 img{
+    width: 100%;
+    border-radius: 15px;
+}
+.about-col-2{
+    flex-basis: 60%;
+}
+/* style "about me" text  */
+.sub-title{
+    font-size: 60px;
+    font-weight:600 ;
+    color: #fff;
+}
+
+.tab-titles{
+    display: flex;
+    margin: 20px 0 40px;
+}
+/* styling the skill,experience and education  */
+.tab-links{
+    margin-right: 50px;
+    font-weight: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+/* cursor on the skill,experience and education show a green line */
+.tab-links::after{
+    content: '';
+    width: 0;   /* by default no line show*/
+    height: 3px;
+    background: #0ee00e;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+/* when you take cursor over it it shoe green line in 50% */
+.tab-links.active-link::after{
+    width: 50%;
+}
+.tab-contents ul li{
+    list-style: none;
+    margin: 10px 0;
+}
+.tab-contents ul li span{
+    color: #ff004f;
+    font-size: 14px;
+}
+
+/* hide content of skill,experience and education */
+.tab-contents{
+    display: none;
+}
+
+/* show only skill,when it have two class */
+.tab-contents.active-tab{
+    display: block;
+}
+/* ------------------------------------------------------about------------------------------------------------------------------------ */
+
+
+
+
+
+
+
+
+
+/* ------------------------------------------------------------------------------------what can i do------------------------------------------------------------------------------- */
+
+#services{
+    padding: 30px 0;
+}
+.services-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(50px , 1fr));
+    grid-gap: 25px;
+    margin-top: 30px;
+}
+/* style what i can do */
+.services-list div{
+    background: #262626;
+    padding: 20px;
+    font-size: 13px;
+    font-weight: 300;
+    border-radius: 20px;
+    transition: background 0.5s, transform 0.5s;
+}
+
+.services-list div i{
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.services-list div h2{
+    font-size: 25px;
+    font-weight: 550;
+    margin-bottom: 10px;
+}
+/* style learn more part */
+.services-list div a{
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    margin-top: 17px;
+    display: inline-block;
+}
+/* when cursor on the service list color will be red and move it 10px up */
+.services-list div:hover{
+    background: linear-gradient(rgba(11, 11, 11, 0.627),#0189c3);
+    transform: translate(-15px,-15px);
+}
+/* ------------------------------------------------------------------------------------what can i do------------------------------------------------------------------------------- */
+
+
+
+
+
+
+
+
+
+
+/* ---------------------------------------technicakl skill-------------------------------- */
+
+#technical{
+    padding: 30px 0;
+}
+.tech-title{
+    font-size: 50px;
+    font-family:  serif Arial, sans-serif
+}
+
+.tech-list{
+    /* display: grid; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    /* grid-template-columns: repeat(auto-fit, minmax(50px , 1fr)); */
+    grid-gap: 25px;
+    margin-top: 30px;
+}
+/* style what i can do */
+.tech-list div{
+    background: #262626;
+    padding: 20px;
+    font-size: 13px;
+    font-weight: 300;
+    border-radius: 20px;
+    transition: background 0.5s, transform 0.5s;
+}
+
+.tech-list div p{
+    font-size: 15px;
+    /* margin-top: 10px; */
+    margin-left: 15px;
+    color: #ffffff;
+}
+
+.tech-list div h2{
+    font-size: 25px;
+    font-weight: 550;
+    margin-bottom: 10px;
+}
+/* style learn more part */
+.tech-list div a{
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    margin-top: 17px;
+    display: inline-block;
+}
+/* when cursor on the service list color will be red and move it 10px up */
+.tech-list div:hover{
+    /* background: #1bb4e3; */
+    transform: translate(-10px,-10px);
+    background: linear-gradient(rgba(11, 11, 11, 0.627),#0189c3);
+
+}
+.tech-list img{
+    height: 4rem;
+}
+
+/* ---------------------------------------technicakl skill-------------------------------- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* -----------------------------------------------------------------portfolio----------------------------------------------------------------------- */
+#portfolio{
+    padding: 50px 0;
+}
+
+.work-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px , 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+
+.work{
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;  /* rest of the content is hidden:*/
+}
+
+.work img{
+    height: 450px;
+    width: 400px;
+    border-radius: 30px;
+    display: block;
+    transition: transform 0.5s;  /* image size transform by 1.3times with 0.5s time */
+}
+
+.layer{
+    width: 100%;
+    height:0;  /* hide all content h3,p,a over img */
+    background: linear-gradient(rgba(11, 11, 11, 0.627),#0189c3);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    font-size:14px;
+    transition: height 0.7s ;  /*change the heigth of the content h3,p,a over img*/
+}
+
+
+
+/* change h3 inside layer */
+.layer h3{
+    text-decoration:solid;
+    font-weight: 5000;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+    color: rgb(255, 255, 255);
+}
+
+/* change p inside layer */
+.layer p{
+    font-size: 15px;
+    color: rgb(255, 255, 255);
+}
+
+
+/* link icon */
+.layer a{
+    margin-top: 20px;
+    color: #ff004f;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 60px;
+    background:#fff ;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+    padding: 15px;
+    /* display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center; */
+}
+
+.layer div{
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.work:hover img{
+    transform: scale(1.2);  /* image size increase by 1.3times when cursor on the image*/
+}
+
+.work:hover .layer{
+    height: 100%;   /* show height of the content on image full*/
+}
+
+
+/* see more content */
+.btn{
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 1px solid #ff004f;
+    padding: 14px 50px;
+    border-radius: 6px;
+    text-decoration: none; /* remove the underline */
+    color: #fff;
+    transition: background 0.5s;  /* translation property for background color*/
+}
+
+/* 
+.btn:hover {
+     background: #ff004f;  during hover on btn background-color: change
+} */
+
+
+
+
+
+
+/* <!-- --------------------------------------------------------------------------------------------contact----------------------------------------------------------------------------------- --> */
+
+.contact-left{
+    flex-basis: 35%;
+}
+.contact-right{
+    flex-basis: 65%;
+
+}
+.contact-left p{
+    margin-top: 30px;
+}
+
+/* giving style to icons */
+/* .contact-left p i{
+    color: #ff004f;
+    margin-right: 15px;
+    font-size: 25px;
+    
+} */
+
+/* designing the social icons */
+.social-icons a {
+    margin-top: 30px;
+    text-decoration: none;
+    font-size: 20px;
+    margin-right: 15px;
+    color: #ababab;
+    display: block;
+    transition: transform 0.5s;
+}
+
+/* applying hover effect on the social icons */
+.social-icons a:hover{
+    color: #ff004f;
+    transform: translateY(-10px);
+}
+
+/* download cv styling,it accure all property present in the button inside -------portfolio--------  */
+.btn.btn2{
+     display: inline-block;
+     background-color: #ff004f;
+}
+
+.query{
+    font-size: 23px;
+}
+
+.contact-right form{
+    width: 100%;
+}
+
+form input,form textarea{
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #262626;
+    padding: 15px;
+    margin: 15px 0;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 6px;
+}
+
+/* this button accure all property from privious button of class btn && btn2 then overwrite some extra property */
+form .btn2{
+    padding: 14px 60px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+/* style for copywrite part */
+.copyright{
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    background: #262626;
+    font-weight: 300;
+    margin-top: 20px;
+}
+/* color of copywrite icon */
+.copyright i{
+    color: #ff004f;
+}
+
+/* after from submitted */
+#msg{
+    color: #61b752;
+    margin-top: -30px;
+    display: block;
+}
+
+
+
+
+
+
+/* ------------------------------------------------------------------------------------------responsive-------------------------------------------------------------------------------------------  */
+/* by default hode menu and cross icons */
+
+nav .fa-solid{
+    display: none;
+}
+
+/* ------------------------------responsive --------------------------- */
+
+@media only screen and (max-width:600px) {
+
+    /* #header{
+        background-image: url(images/phone-background.png);  backgroub image for small device
+    } */
+    .header-text{
+        margin-top: 100%;
+        font-size: 15px;
+    }
+    .header-text h1{
+        font-size: 30px;
+        margin-top: 20px;
+    }
+
+    nav .fa-solid{
+        display: block;
+    }
+    /* hide all menu list */
+    nav ul{
+        background-color: #ff004f;
+        position: fixed;
+        top: 0;
+         right: -200px; /* side navigation bar is hidden by default two function add openmenu && closemenu to work upon it */
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: right 0.5s;
+    }
+    /* style all menu list  */
+    nav ul li{
+        display: block;
+        margin: 25px;
+    }
+    /* style cross icon */
+    nav ul .fa-solid{
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+    .sub-title{
+        font-size: 40px;
+        
+    }
+    .about-col-1,.about-col-2{
+            flex-basis: 100%;
+    }
+    .about-col-1 {
+        margin-bottom: 30px;
+    }
+    .about-col-2{
+        font-size: 14px;
+    }
+    /* skill,experience and education */
+    .tab-links{
+        font-size: 14px;
+        margin-right: 20px;
+    }
+    .contact-left,
+    .contact-right{
+        flex-basis: 100%;
+    }
+    .copyright{
+        font-size: 15px;
+    }
+    .services-list {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    
+}
+
